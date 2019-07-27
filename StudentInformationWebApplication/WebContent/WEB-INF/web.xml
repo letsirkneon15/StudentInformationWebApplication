@@ -9,4 +9,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+<<<<<<< HEAD
+=======
+
+<servlet>
+<servlet-name>StudentManagement
+</servlet-name>
+<servlet-class>com.servlet.StudentManagement</servlet-class></servlet>
+<servlet-mapping><servlet-name>StudentManagement</servlet-name><url-pattern>/home</url-pattern></servlet-mapping>
+>>>>>>> refs/remotes/choose_remote_name/master
 </web-app>
