@@ -5,7 +5,7 @@
 <head>
 
 <meta charset="ISO-8859-1">
-<title>Create New Student</title>
+<title>Edit Student</title>
 </head>
 	<style type="text/css">
 		
@@ -66,6 +66,9 @@
 			width:1190px;
 			background-color:#f9f9f9;
 		}
+		.error{
+			color:red;
+		}
 		
 		hr {
 			border-top: 1px #0f213e solid;
@@ -80,10 +83,7 @@
 		.longPlease {
 			width: 300px;
 		}
-		.error{
-			color:red;
-		}
-	
+		
 		td {
 		width : 100px
 		}
@@ -100,35 +100,30 @@
 		<div id="navigation-bar">
 			
 			<a href="index.jsp" class="nav-font-box nav-link">Home</a> | 
-			<a href="AddStudent.jsp" class="nav-font-box nav-link">Add New Student</a> | 
-			<a href="Search.jsp" class="nav-font-box nav-link">Edit Student</a> 
+			<a href="AddCourse.jsp" class="nav-font-box nav-link">Add Course</a> | 
+			<a href="SearchCourse.jsp" class="nav-font-box nav-link">Edit Course</a> 
 		</div>
 
 		<div id="main-containter">
 				
-			<p><h1>Search for Student to Edit</h1></p>
+			<p><h1> Edit Course</h1></p>
 			<hr>
 <p>
 <Form method="post" action="StudentWebDB">
 <center>
-<p class="error">No Record Found</p>
 <table border=0>
 <tr>
-		<td> First Name: </td>
-		<td> <input type ="text" class="longPlease" name ="FirstName" ></input> </td>
-<tr>
-		<td> Last Name: </td>
-		<td> <input type ="text"  class="longPlease" name="LastName"></input> </td>
+		<td>Course ID: </td>
+		<td> <input type="text" readonly="readonly" STYLE="background-color: #CCCCCC" class="longPlease" name="CourseID" value = ${CourseID}></input> </td>
 </tr>
 <tr>
-		<td> Date of Birth: </td>
-		<td> <input type ="text"  name="DateOfBirth"></input> </td>
+		<td> Course Name: </td>
+		<td> <input type ="text" class="longPlease" name ="CourseName" value = ${CourseName}></input> </td>
 <tr>
-<td></td>
-<td>
-		 <center><input type="submit" value="Search" name="Search"></center>
-</td>
+		<td> Course Description: </td>
+		<td> <input type ="text"  class="longPlease" name="CourseDesc" value = ${CourseDesc}></input> </td>
 </tr>
+
 </table>
 </Form>
 </center>
